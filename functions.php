@@ -32,7 +32,8 @@ function saldoAtual($transacoes)
 {
     $receitas = totalReceitas($transacoes);
     $despesas = totalDespesas($transacoes);
-    return $receitas - $despesas;
+    $saldo = $receitas - $despesas;
+    return $saldo;
 }
 
 function percentualDespesa($valor, $total)
@@ -42,7 +43,8 @@ function percentualDespesa($valor, $total)
     }
     $valor = floatval($valor);
     $total = floatval($total);
-    return ($valor / $total) * 100;
+    $percentual = ($valor / $total) * 100;
+    return $percentual;
 }
 
 function validarTexto($texto)
@@ -56,10 +58,10 @@ function validarTexto($texto)
 
 function validarValor($valor)
 {
-    if ($valor === '' || $valor === null) {
+    if ($valor == '' || $valor == null) {
         return false;
     }
-    if (!is_numeric($valor)) {
+    if (is_numeric($valor) == false) {
         return false;
     }
     if (floatval($valor) <= 0) {
@@ -67,3 +69,4 @@ function validarValor($valor)
     }
     return true;
 }
+

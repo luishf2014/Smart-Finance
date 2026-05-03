@@ -2,7 +2,14 @@
 
 session_start();
 
-if (!isset($_SESSION['logado']) || $_SESSION['logado'] != true) {
+$usuario_esta_logado = false;
+if (isset($_SESSION['logado'])) {
+    if ($_SESSION['logado'] == true) {
+        $usuario_esta_logado = true;
+    }
+}
+
+if ($usuario_esta_logado == false) {
     header('Location: login.php');
     exit;
 }
