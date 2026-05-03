@@ -66,8 +66,8 @@ if ($saldo >= 0) {
 $titulo = 'Dashboard - Controle Financeiro';
 $pagina_menu = 'index';
 
-include 'includes/header.php';
-include 'includes/menu.php';
+include 'header.php';
+include 'menu.php';
 ?>
 
 <div class="mb-4">
