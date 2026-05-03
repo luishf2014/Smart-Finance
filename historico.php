@@ -25,8 +25,8 @@ $tot_desp = totalDespesas($lista);
 
 $titulo = 'Histórico - Controle Financeiro';
 $pagina_menu = 'historico';
-include 'includes/header.php';
-include 'includes/menu.php';
+include 'header.php';
+include 'menu.php';
 ?>
 
 <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-3 mb-4">
